@@ -1,0 +1,295 @@
+/* Carousel içi yazı kutusu başlık ve açıklama stilleri */
+/* Renk paleti (indigo tonları) */
+.text-indigo {
+  color: #4f46e5 !important;
+}
+
+/* Navbar marka yazısı */
+.navbar-brand {
+  font-size: 1.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Nav link hover */
+.nav-link {
+  color: #374151 !important;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #4f46e5 !important;
+  background-color: #ede9fe;
+  text-decoration: none;
+}
+
+/* Hamburger buton özel */
+.navbar-toggler {
+  border: none;
+}
+
+/* Gölgelendirme zaten bootstrap shadow-sm */
+
+.carousel-caption h2 {
+    color: #1e293b;
+    /* Lacivert başlık */
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.banner-img {
+    height: 90vh;
+}
+
+.carousel-caption p {
+    color: #334155;
+    /* Koyu gri açıklama */
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Buton stili (turuncu temalı CTA) */
+.carousel-caption .btn {
+    background-color: #ffffff;
+    color: #f97316;
+    border: 2px solid #f97316;
+    padding: 10px 24px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #f97316;
+    color: #ffffff;
+}
+
+/* Fade-in animasyonu ekleyelim */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.carousel-caption {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        left: 50% !important;
+        right: auto !important;
+        bottom: 20% !important;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
+
+/* Hakkımızda kısmı için özel stiller */
+#hakkimizda h2 {
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+#hakkimizda .btn-outline-primary {
+    color: #f97316;
+    border-color: #ffffff;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+#hakkimizda .btn-outline-primary:hover {
+    background-color: #f97316;
+    color: #fff;
+}
+
+#hakkimizda .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hizmetler .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#hizmetler .card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 30px rgba(249, 115, 22, 0.45);
+}
+
+#hizmetler h2 {
+    font-weight: 700;
+    font-size: 2.7rem;
+    margin-bottom: 3rem;
+}
+
+#hizmetler .card-title {
+    color: #f97316;
+    font-weight: 700;
+}
+
+#hizmetler .card-text {
+    font-size: 1.05rem;
+    color: #4b5563;
+    /* soft koyu gri */
+}
+
+#hizmetler i {
+    transition: transform 0.3s ease;
+}
+
+#hizmetler .card:hover i {
+    transform: scale(1.15);
+    color: #f59e0b;
+    /* biraz daha parlak turuncu */
+}
+
+#services .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#services .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(249, 115, 22, 0.4);
+}
+
+#services .card i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#services .card:hover i {
+    transform: scale(1.2);
+    color: #f59e0b;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.7s forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.7s forwards;
+}
+
+.btn-indigo {
+    background-color: #4f46e5;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-indigo:hover {
+    background-color: #000000;
+}
+
+.text-indigo {
+    color: #000000 !important;
+}
+
+#services .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#services .card-body {
+    flex-grow: 1;
+}
+
+#contact .row {
+    align-items: stretch;
+    /* Tüm kolonları aynı yükseklikte zorla */
+}
+
+#contact .col-md-5,
+#contact .col-md-7 {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .col-md-5>div,
+#contact .col-md-7>form {
+    flex: 1 1 auto;
+    /* İçerik tamamen yüksekliği kaplasın */
+}
+
+footer {
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    user-select: none;
+}
+
+.iletişim-container {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+.iletişim-container a {
+  color: #fff;
+}
+/* CSS */
+.button-87 {
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-87:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-87:active {
+  transform: scale(0.95);
+}
