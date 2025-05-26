@@ -1,0 +1,1 @@
+# R10.net Robots.txt Servisi # User-Agent: *Allow: / Sitemap: http://dtsedatolak.online/sitemap.xml
